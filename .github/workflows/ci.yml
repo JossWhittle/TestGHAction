@@ -21,5 +21,5 @@ jobs:
           echo "Github Actor: ${{ github.actor }}"
           echo "Github Ref:   ${{ github.ref }}"
           echo "Github SHA:   ${{ github.sha }}"
-          echo "Workflow:     josswhittle/TestGHAction/main"
+          echo "Workflow:     josswhittle/TestGHAction/development"
           echo "Payload:      $(cat payload.txt)"
