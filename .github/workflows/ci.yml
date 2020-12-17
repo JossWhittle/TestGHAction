@@ -1,0 +1,25 @@
+name: Execute Actions Test
+
+on:
+  push:
+    branches: [ main, development ]
+  pull_request:
+    branches: [ main, development ]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-20.04
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Print Github Context and hardcoded Workflow Ref
+        run: |
+          echo "Github Repo:  ${{ github.repository }}"
+          echo "Github Actor: ${{ github.actor }}"
+          echo "Github Ref:   ${{ github.ref }}"
+          echo "Github SHA:   ${{ github.sha }}"
+          echo "Workflow:     josswhittle/TestGHAction/main"
+          echo "Payload:      $(cat payload.txt)"
